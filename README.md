@@ -1,2 +1,2 @@
 # Restaurant-Name-Generator
-Restaurant and Menu Items Generator for multiple cuisines
+This project builds an application that will generate the Restaurant Name and Menu Items for multiple cuisines

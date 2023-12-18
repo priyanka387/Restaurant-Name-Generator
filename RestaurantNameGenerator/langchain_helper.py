@@ -2,12 +2,15 @@ from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
-from secret_key import openapi_key
+
 
 import os
-os.environ['OPENAI_API_KEY'] = openapi_key
+from dotenv import load_dotenv
+load_dotenv()
 
-llm = OpenAI(temperature=0.7)
+apikey = os.getenv("OPENAI_API_KEY")
+
+llm = OpenAI(openai_api_key = apikey, temperature=0.7)
 
 def generate_restaurant_name_and_items(cuisine):
     # Chain 1: Restaurant Name
@@ -38,3 +41,4 @@ def generate_restaurant_name_and_items(cuisine):
 
 if __name__ == "__main__":
     print(generate_restaurant_name_and_items("Italian"))
+

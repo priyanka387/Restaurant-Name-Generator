@@ -3,3 +3,4 @@ langchain
 google-search-results
 streamlit
 wikipedia
+python-dotenv
